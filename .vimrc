@@ -106,7 +106,7 @@ map <C-j> :bnext<CR>
 map <C-k> :bprev<CR>
 nnoremap * *``
 noremap <F2> :nohl<CR>
-inoremap <C-l> <C-o>A
+inoremap <C-l> <C-o>a
 
 highlight ColorColumn ctermbg=33
 
