@@ -212,6 +212,7 @@ nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
 let g:ctrlp_funky_syntax_highlight = 1
 let g:ctrlp_extensions = ['funky']
 let g:ctrlp_match_window = 'top,order:ttb,min:5,max:20,results:20'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn|log))$'
 
 " colorscheme minimalist
 " colorscheme vim-material
@@ -233,6 +234,11 @@ set encoding=utf-8
 
 " Keep your cursor centered vertically on the screen
 set so=999
+
+"Auto adding Shebang in files
+augroup Shebang
+    autocmd BufNewFile *.sh 0put =\"#!/usr/bin/env bash\"|$
+augroup END
 
 " Add file headers automatically
 autocmd bufnewfile *.py so /data00/home/xushikun/.vim/python_header.template
